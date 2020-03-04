@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSec = new System.Windows.Forms.Button();
+            this.btnUygula = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRenk = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button4 = new System.Windows.Forms.Button();
+            this.tbTolerans = new System.Windows.Forms.NumericUpDown();
+            this.btnYenile = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTolerans)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -51,39 +51,39 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnSec
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Seç";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSec.Location = new System.Drawing.Point(12, 12);
+            this.btnSec.Name = "btnSec";
+            this.btnSec.Size = new System.Drawing.Size(75, 23);
+            this.btnSec.TabIndex = 1;
+            this.btnSec.Text = "Seç";
+            this.btnSec.UseVisualStyleBackColor = true;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
-            // button2
+            // btnUygula
             // 
-            this.button2.Location = new System.Drawing.Point(533, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Uygula";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnUygula.Location = new System.Drawing.Point(533, 12);
+            this.btnUygula.Name = "btnUygula";
+            this.btnUygula.Size = new System.Drawing.Size(75, 23);
+            this.btnUygula.TabIndex = 2;
+            this.btnUygula.Text = "Uygula";
+            this.btnUygula.UseVisualStyleBackColor = true;
+            this.btnUygula.Click += new System.EventHandler(this.btnUygula_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button3
+            // btnRenk
             // 
-            this.button3.Location = new System.Drawing.Point(131, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Renk";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRenk.Location = new System.Drawing.Point(131, 12);
+            this.btnRenk.Name = "btnRenk";
+            this.btnRenk.Size = new System.Drawing.Size(75, 23);
+            this.btnRenk.TabIndex = 3;
+            this.btnRenk.Text = "Renk";
+            this.btnRenk.UseVisualStyleBackColor = true;
+            this.btnRenk.Click += new System.EventHandler(this.btnRenk_Click);
             // 
             // label1
             // 
@@ -94,37 +94,37 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Tolerans Değeri(1-150):";
             // 
-            // numericUpDown1
+            // tbTolerans
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(362, 5);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.tbTolerans.Location = new System.Drawing.Point(362, 5);
+            this.tbTolerans.Maximum = new decimal(new int[] {
             150,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.tbTolerans.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(50, 20);
-            this.numericUpDown1.TabIndex = 6;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.tbTolerans.Name = "tbTolerans";
+            this.tbTolerans.Size = new System.Drawing.Size(50, 20);
+            this.tbTolerans.TabIndex = 6;
+            this.tbTolerans.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // button4
+            // btnYenile
             // 
-            this.button4.Location = new System.Drawing.Point(713, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Yenile";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnYenile.Location = new System.Drawing.Point(713, 12);
+            this.btnYenile.Name = "btnYenile";
+            this.btnYenile.Size = new System.Drawing.Size(75, 23);
+            this.btnYenile.TabIndex = 7;
+            this.btnYenile.Text = "Yenile";
+            this.btnYenile.UseVisualStyleBackColor = true;
+            this.btnYenile.Click += new System.EventHandler(this.btnYenile_Click);
             // 
             // label2
             // 
@@ -141,17 +141,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 480);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.btnYenile);
+            this.Controls.Add(this.tbTolerans);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRenk);
+            this.Controls.Add(this.btnUygula);
+            this.Controls.Add(this.btnSec);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTolerans)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,14 +160,14 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSec;
+        private System.Windows.Forms.Button btnUygula;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRenk;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.NumericUpDown tbTolerans;
+        private System.Windows.Forms.Button btnYenile;
         private System.Windows.Forms.Label label2;
     }
 }

@@ -21,12 +21,12 @@ namespace ColorFinder
         string dosyaYolu = string.Empty;
         Bitmap bmp = null;
 
-        bool IsChoosenPixel(Color color, int tolerance) => 
-            color.R < button3.BackColor.R + tolerance && color.R > button3.BackColor.R - tolerance &&
-            color.G < button3.BackColor.G + tolerance && color.G > button3.BackColor.G - tolerance &&
-            color.B < button3.BackColor.B + tolerance && color.B > button3.BackColor.B - tolerance;
+        bool renkKontrol(Color color, int tolerance) => 
+            color.R < btnRenk.BackColor.R + tolerance && color.R > btnRenk.BackColor.R - tolerance &&
+            color.G < btnRenk.BackColor.G + tolerance && color.G > btnRenk.BackColor.G - tolerance &&
+            color.B < btnRenk.BackColor.B + tolerance && color.B > btnRenk.BackColor.B - tolerance;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSec_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -60,18 +60,27 @@ namespace ColorFinder
                 //sebebi ise seçilen resmin picturebox nesnesinde tam olarak gözükmesini sağlamaktır.
                 pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
-                button1.Enabled = false;
+                btnSec.Enabled = false;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnRenk_Click(object sender, EventArgs e)
+        {
+
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                btnRenk.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void btnUygula_Click(object sender, EventArgs e)
         {
             for (int y = 0; y < bmp.Height; y++) //Pixelleri boyuna olarak tarar.
             {
                 for (int x = 0; x < bmp.Width; x++)//Pixelleri yatay olarak tarar.
                 {
                     Color eski = bmp.GetPixel(x, y); //Sıradaki pixeli alır.
-                    if(!IsChoosenPixel(eski, Convert.ToInt32(numericUpDown1.Value)))
+                    if(!renkKontrol(eski, Convert.ToInt32(tbTolerans.Value)))
                     {
                     int siyah = (eski.R + eski.G + eski.B) / 255; //ele alınan pixelin RGB kodlarını siayaha sıfırlar.
 
@@ -86,16 +95,7 @@ namespace ColorFinder
             pictureBox1.Image = bmp;
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                button3.BackColor = colorDialog1.Color;
-            }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void btnYenile_Click(object sender, EventArgs e)
         {
             this.Hide();
             var form1 = new Form1();
